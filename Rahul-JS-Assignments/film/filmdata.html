@@ -4,89 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Booking</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        .container {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: dodgerblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: deepskyblue;
-        }
-        .ticket-template {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: lightgreen;
-            border-radius: 5px;
-            width: 100%;
-            text-align: center;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name">
+<body class="flex flex-col items-center mt-12 font-sans w-[30%] ml-[30%]">
+    <div class="container bg-gray-100 p-5 rounded-lg shadow-lg">
+        <div class="form-group mb-4">
+            <label for="name" class="block mb-2">Name:</label>
+            <input type="text" id="name" class="w-full p-2 box-border">
         </div>
-        <div class="form-group">
-            <label for="film">Film:</label>
-            <input type="text" id="film">
+        <div class=" mb-4">
+            <label for="film" class="block mb-2">Film:</label>
+            <input type="text" id="film" class="w-full p-2 box-border">
         </div>
-        <div class="form-group">
-            <label for="tickets">Number of Tickets:</label>
-            <input type="number" id="tickets">
+        <div class="mb-4">
+            <label for="tickets" class="block mb-2">Number of Tickets:</label>
+            <input type="number" id="tickets" class="w-full p-2 box-border">
         </div>
-        <button id="submit">Submit</button>
+        <button id="submit" class=" bg-blue-500 text-white rounded hover:bg-blue-400 w-[200px] ml-[20%] h-[30px] text-white" onclick="submit()">Book Tickets
+        </button>
     </div>
-    <div id="ticket-output"></div>
-
+    <div id="ticket" class="w-full h-10 border border-1 border-red pt-2 bg-[lightgray] text-[blue] flex flex-col items-center mt-5 "></div>
+    <div id="print" class="w-[200px] h-10 border border-1 border-red pt-2 bg-[blue] text-[white] flex flex-col items-center mt-5 ">Print Ticket</div>
     <script>
-        document.getElementById('submit').addEventListener('click', function() {
+        function submit() {
             const name = document.getElementById('name').value;
             const film = document.getElementById('film').value;
             const tickets = document.getElementById('tickets').value;
+            document.getElementById("ticket").innerHTML=`${name} booked ${tickets} ticket(s) for ${film}`;
 
-            if (name && film && tickets) {
-                const ticketTemplate = `${name} booked ${tickets} ticket(s) for ${film}`;
-                
-                const ticketOutput = document.createElement('div');
-                ticketOutput.className = 'ticket-template';
-                ticketOutput.textContent = ticketTemplate;
-
-                document.getElementById('ticket-output').appendChild(ticketOutput);
-            } else {
-                alert('Please fill in all fields.');
-            }
-        });
+        }                
     </script>
 </body>
 </html>

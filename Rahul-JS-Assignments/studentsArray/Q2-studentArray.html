@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Finder</title>
 </head>
 <body>
-    <h3>to enter the list of Students in an array and upon reading a value from text box. Print the name of student on screen</h3>
+    <h3>Enter a student name:</h3>
+    <input type="text" id="sname" placeholder="Enter student ID">
+    <button onclick="findStudent()">Find Student</button>
+    <p id="dname"></p>
+
+    <script>
+        const students = ['Alice', 'Bob', 'Charlie', 'Diana', 'Edward'];
+
+        function findStudent() {
+            let name = document.getElementById("sname").value;
+            let found = false;
+            
+            for (let i = 0; i < students.length; i++) {
+                if (name === students[i]) {
+                    found = true;
+                    break;
+                }
+            }
+            
+            if (found) {
+                document.getElementById("dname").innerHTML = name;
+            } else {
+                document.getElementById("dname").innerHTML = "Not Found";
+            }
+        }
+    </script>
 </body>
 </html>
