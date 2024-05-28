@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Select</title>
+</head>
+<body>
+    <h1>Fruit Select</h1>
+    <h3 id="midhun"></h3>
+    <div>
+        <label>Select a fruit index: </label>
+        <select id="fruit" onchange="fruit()">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div>
+        Selected Fruit: <span id="sel"></span>
+    </div>
+
+    <script>
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi", "Watermelon"];
+        document.getElementById("midhun").innerHTML=("Fruits :"+fruits)
+        function fruit() {
+            const i = document.getElementById('fruit').value;
+            document.getElementById('sel').innerHTML = fruits[i];
+        }
+
+    </script>
+</body>
+</html>

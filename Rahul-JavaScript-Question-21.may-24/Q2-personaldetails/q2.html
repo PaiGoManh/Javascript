@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h3>3.Enter your Personal details on input field & print on submit</h3>
+    <div class="ml-4">
+        <div class="flex  items-center mb-2 mt-8" >
+            <label for="name">Name :</label>
+            <input type="text" id="text" class="border border-1 border-black ml-10">
+        </div>
+        <div class="flex items-center mb-2 ">
+            <label for="name">Email ID :</label>
+            <input type="email" id="email" class="border border-1 border-black ml-6">
+        </div>
+        <div class="flex items-center mb-2 ">
+            <label for="name">Age :</label>
+            <input type="text" id="age" class="border border-1 border-black ml-[55px]">
+        </div>
+        <div class="flex items-center mb-2 ">
+            <label for="name">Mobile No :</label>
+            <input type="text" id="phone" class="border border-1 border-black ml-2">
+        </div>
+        <div class="flex mb-2 ">
+            <label for="name">Address :</label>
+            <textarea  id="address" class="border border-1 border-black ml-6 h-[100px] w-[250px]"></textarea>
+        </div>
+        <button class="border border-1 border-black bg-[gray] w-[100px] h-7 ml-[120px] cursor-pointer rounded-full mt-4" onclick="printtext()">Submit</button>
+    </div>
+
+    <div class="mt-8">
+        <h3 id="textget"></h3>
+        <h3 id="emailget"></h3>
+        <h3 id="ageget"></h3>
+        <h3 id="phoneget"></h3>
+        <h3 id="addressget"></h3>
+    </div>
+
+    <script>
+        {
+            function printtext(){
+                name=document.getElementById("text").value;
+                document.getElementById("textget").innerHTML=(`Name:  `+name);
+
+                email=document.getElementById("email").value;
+                document.getElementById("emailget").innerHTML=('Email:  '+email);
+
+                age=document.getElementById("age").value;
+                document.getElementById("ageget").innerHTML=('Age:  '+age);
+
+                phone=document.getElementById("phone").value;
+                document.getElementById("phoneget").innerHTML=('Phone No:  '+phone);
+
+                address=document.getElementById("address").value;
+                document.getElementById("addressget").innerHTML=('Address:  '+address);
+                
+            }
+        }
+    </script>
+</body>
+</html>

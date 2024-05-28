@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+        document.write("Using let Declaration <br>")
+        let a=20;
+        {
+            let a=15;
+            document.write('<br> value of a = '+a) // here we get 15
+        }
+        document.write('<br>')
+        document.write('value of a = '+a) //here we get 20
+        document.write('<br><br>Beacuse the Let have limited scope and non declarable <br><br><br>')
+        
+        document.write("Using var Declaration")
+        var b=20;
+        {
+            var b=15;
+            document.write('<br>')
+            document.write('<br> value of b ='+b)// here we get 15
+
+        }
+        document.write('<br> value of b ='+b) // here also we get 15
+        document.write('<br><br>in line by line execution the last updated var value will be get because the var can accese globally ')
+
+        const pi=3.14;
+        r=4;
+        area=2*pi*r;
+        document.write('<br><br><br>Area= '+area);
+
+    </script>
+</body>
+</html>

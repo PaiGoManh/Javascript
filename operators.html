@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>JavaScript operators</h1>
+    <br>
+    <h2 style="font-weight: 600;">Type of operator</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <h1>x=10 and y=5</h1>
+
+    <h2 style="font-weight: 600;">Arithmetic Operators</h2>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>    
+    <p id="mod"></p>
+    <p id="sqr"></p>
+    <h3>Increment Operators</h3>
+    <p id="increment"></p>
+    <p id="pre"></p>
+    <p id="post"></p>
+    <h3>Decrement Operator</h3>
+    <p id="decrement"></p>
+    <p id="pred"></p>
+    <p id="postd"></p>
+
+    <h2 style="font-weight: 600;">Assignment Operators</h2>
+    <p id="assign1"></p>
+    <p id="assign2"></p>
+    <p id="assign3"></p>
+    <p id="not"></p>
+    <p id="less"></p>
+    <p id="great"></p>
+
+    <h2 style="font-weight: 600;">Bitwise  Operators</h2>
+    <p id="Bitand"></p>
+    <p id="Bitor"></p>
+    <p id="Bitxor"></p>
+
+    <h2 style="font-weight: 600;">Logical  Operators</h2>
+    <p id="logand"></p>
+    <p id="logor"></p>
+
+    <h2 style="font-weight: 600;">Ternery  Operators</h2>
+    <p id="number"></p>
+    <p id="mar"></p>
+
+    <script>
+        let a = 4;
+        let b = "Rahul";
+        document.getElementById("demo").innerHTML = "type of 'a=4' =" + typeof(a);
+        document.getElementById("demo1").innerHTML = "type of 'b=Rahul' =" + typeof(b);
+        
+        {
+            let x = 10;
+            let y = 5;
+            let result;
+            x += y;
+            document.getElementById("add").innerHTML = " X += Y :" + x;
+            x -= y;
+            document.getElementById("sub").innerHTML = " X -= Y :" + x;
+            x *= y;
+            document.getElementById("mul").innerHTML = " X *= Y :" + x;
+            x /= y;
+            document.getElementById("div").innerHTML = " X /= Y :" + x;
+            x %= y;
+            document.getElementById("mod").innerHTML = " X %= Y :" + x;
+            x **= y;
+            document.getElementById("sqr").innerHTML = " X **= Y :" + x;
+            x=10;
+            document.getElementById("increment").innerHTML="Before increment"+x+", After Increment:"+(++x);
+            s=++x;
+            document.getElementById("pre").innerHTML="Pre increment:"+s;
+            m=x++;
+            document.getElementById("post").innerHTML="Post increment:"+m+"&nbsp;&nbsp;x="+x;
+        }
+
+        {
+            let a=10;
+            document.getElementById("decrement").innerHTML="Before decrement"+a+", After decrement:"+(--a);
+            b=--a;
+            document.getElementById("pred").innerHTML="Pre decrement:"+b;
+            c=a--;
+            document.getElementById("postd").innerHTML="Post decrement:"+c+"&nbsp; &nbsp;x="+a;
+        }
+
+        {
+            let x = 10;
+            let y = 5;
+            let c;
+            c = x = y; 
+            document.getElementById("assign1").innerHTML = " X = Y :" + c;
+            c = x == y;
+            document.getElementById("assign2").innerHTML = " X == Y :" + c;
+            c = x === y; 
+            document.getElementById("assign3").innerHTML = " X === 'Y' :" + c;
+            c = x <= y;
+            document.getElementById("less").innerHTML = " X <= 'Y' :" + c;
+            c = x >= y;
+            document.getElementById("great").innerHTML = " X >= 'Y' :" + c;
+            c = x != y;
+            document.getElementById("not").innerHTML = " X != 'Y' :" + c;
+        }
+
+        {
+            let x=5;
+            let y=1;
+            z= 5 & 1;
+            document.getElementById("Bitand").innerHTML='Bitwise And of 5 & 1 ='+z;
+            z= 5 | 1;
+            document.getElementById("Bitor").innerHTML='Bitwise OR of 5 | 1= '+z;
+            z= 5 ^ 1;
+            document.getElementById("Bitxor").innerHTML='Bitwise XOR of 5 ^ 1= '+z;
+
+        }
+
+        {
+            let x=5;
+            let y=1;
+            z= 5 && 1;
+            document.getElementById("logand").innerHTML='Logical And of 5 && 1 ='+z;
+            z= 5 || 1;
+            document.getElementById("logor").innerHTML='Logical OR of 5 || 1= '+z;
+
+        }
+
+        {
+            let age= document.getElementById("number").innerHTML=27;
+            let marraige=(age<24)?"Not Eligible for marraiage":"Eligible for Marriage";
+            document.getElementById("mar").innerHTML=""+marraige;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Two values equal or not</h3>
+    <h3 id="demo"></h3>
+    <hr>
+    <h3>Two values greater than or equal</h3>
+    <h3 id="demo1"></h3>
+    <hr>
+    <h3>Two values Lower than or equal</h3>
+    <h3 id="demo2"></h3>
+    <hr>
+    <h3>Two values greater and equal</h3>
+    <h3 id="demo3"></h3>
+    <hr>
+    <script>
+
+            let a=10;
+            let b=5;
+        {
+
+            if(a==b){
+                document.getElementById("demo").innerHTML=`a=${a} <br> b=${b} <br> both are equal`;
+            }
+            else{
+                document.getElementById("demo").innerHTML=`a=${a} <br> b=${b} <br> both are not equal`;
+
+            }
+        }
+
+        {   
+
+            if(a>=b){
+                document.getElementById("demo1").innerHTML=`a=${a} <br> b=${b} <br> A is greater`;
+            }
+            else{
+                document.getElementById("demo1").innerHTML=`a=${a} <br> b=${b} <br> B is Greater`;
+
+            }
+
+        }
+
+        {   
+
+            if(a<=b){
+                document.getElementById("demo2").innerHTML=`a=${a} <br> b=${b} <br> A is lower`;
+            }
+            else{
+                document.getElementById("demo2").innerHTML=`a=${a} <br> b=${b} <br> B is Lower`;
+
+            }
+
+        }
+
+
+        {
+
+            if(a == b){
+                document.getElementById("demo3").innerHTML = `a=${a} <br> b=${b} <br> Equal`;
+            } else if (a > b){
+                document.getElementById("demo3").innerHTML = `a=${a} <br> b=${b} <br> A is greater`;
+            } else {
+                document.getElementById("demo3").innerHTML = `a=${a} <br> b=${b} <br> B is greater`;
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter first name: 
+    <input id="ftext" onchange="printftext()">
+    <br>
+    <br>
+    Enter Last name: 
+    <input id="ltext" onchange="printltext()">
+    <br>
+    <br>
+    Enter Age:
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="number" onchange="printnum()" > 
+    <br><br>Name :<span id="fdemo">__________</span>
+    <p id="ftype"></p>
+    <br><br>Name :<span id="ldemo">__________</span>
+    <p id="ltype"></p>
+    <br><br>Age : <span id="demo1">__________</span>
+    <p id="type1"></p>
+    <script>
+        function printftext(){
+            let x=document.getElementById("ftext").value;
+            document.getElementById("fdemo").innerHTML=x;
+            document.getElementById("ftype").innerHTML=(`Type :`+typeof(x));
+            console.log(event);
+            console.log(event.target.value);
+
+        }
+        {
+            function printltext(){
+            let x=document.getElementById("ltext").value;
+            document.getElementById("ldemo").innerHTML=x;
+            document.getElementById("ltype").innerHTML=(`Type :`+typeof(x));
+
+        }
+        }
+        {
+            function printnum(){
+            let x=document.getElementById("number").value;
+            document.getElementById("demo1").innerHTML=x;
+            document.getElementById("type1").innerHTML=(`Type :`+typeof(x));
+
+        }
+        }
+    </script>
+    
+</body>
+</html>

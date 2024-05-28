@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x="Rahul";
+        let y="Rahul";
+        let z= x==y;
+        let v= x===y;
+        document.write(`<br>result:`+z+`<br>Type of Z:`+typeof(z));
+        document.write(`<br> is Case Sensitive:`+v+`<br>Type of v:`+typeof(v));
+
+        {
+            let a= "Welcome"
+            let b= new String("Welcome");
+            let c= a==b;
+            let d= a===b;
+            document.write(`<br><br>let a=${a}<br>Type of ${a}:`+typeof(a)+`<br>let b=${b}<br>Type of ${b}:`+typeof(b)+`<br>result:`+c+`<br>Type of ${c}:`+typeof(c));
+           document.write(`<br>is Case Sensitive:`+d+`<br>Type of ${d}:`+typeof(d));
+
+        }
+
+   </script>
+</body>
+</html>

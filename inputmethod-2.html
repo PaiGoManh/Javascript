@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter First Name: 
+        <input type="text" name="enter your name" id="ftext" >
+        <br>
+        <br>
+        Enter Last Name:
+        <input type="text" name="Enter your last name" id="ltext" >
+        <br>
+        <br>
+        <button onclick="printtext()">click here</button>
+        <p id="demo"></p>    
+    </div>
+    <script>
+        function printtext(){
+            let x=document.getElementById("ftext").value;
+            let y=document.getElementById("ltext").value;
+            let z=x+" "+y;
+
+            document.getElementById("demo").innerHTML=z;
+        }
+    </script>
+</body>
+</html>

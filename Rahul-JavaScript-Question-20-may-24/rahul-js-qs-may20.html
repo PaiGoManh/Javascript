@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1. Sort array in descending order(sort & reverse)</h3>
+    <p id="q1"></p>
+    <p id="q11"></p>
+    <p id="q12"></p>
+    <hr>
+    <h3>3. Compare “Hello World” & “hEllO World” and display the result & its type.</h3>
+    <h4>using == compare</h4>
+    <p id="Q21"></p>
+    <h4>using === compare</h4>
+    <p id="Q22"></p>
+    <hr>
+
+    <h3>4.Print this statement<br>
+        “ I am ___  yrs of old and my brother is 10 yrs older to me. He is now __  years old.”</h3>
+    <p id="Q4"></p>
+    <hr>
+    <h3>5. Consider this statement<br>
+        “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).</h3>
+    <p id="Q5"></p>
+    <hr>
+    <h3>6. I have a file with js extension. I want to get the file name only with no extension.</h3>
+    <p id="Q6"></p>
+    <hr>
+    <h3>7. Multiply two numbers</h3>
+    <p id="Q7"></p>
+    <hr>
+    <h3>8. Multiply 3 nos</h3>
+    <p id="Q8"></p>
+    <hr>
+    <h3>9. Find 2*(20+30)</h3>
+    <p id="Q9"></p>
+    <hr>
+    
+    <script>
+        {
+            const cars=["Polo","Maruthi","Zen","I-10","Bolero","Thar"];
+            document.getElementById("q1").innerHTML=`The Array =`+cars;
+            s=cars.sort();
+            document.getElementById("q11").innerHTML=`Sorted Array=`+s;
+            d=cars.reverse();
+            document.getElementById("q12").innerHTML=`Array in Descending Order =`+d;
+        }
+
+        {
+            let a= "Hello World"
+            let b= "hEllO World"
+            let c= a==b;
+            let d= a===b;
+            document.getElementById("Q21").innerHTML=(`<br>let a=${a}<br>Type :`+typeof(a)+`<br>let b=${b}<br>Type :`+typeof(b)+`<br><br><br>result:`+c+`&nbsp;&nbsp;Type of result:`+typeof(c));
+            document.getElementById("Q22").innerHTML=(`<br>result :`+d+`&nbsp;&nbsp;Type of result:`+typeof(d));
+
+        }
+
+        {
+            let a=10;
+            let b=10;
+            let c=a+b;
+            document.getElementById("Q4").innerHTML=(`"i am ${a} yrs old yrs of old and my brother is 10 yrs older to me. He is now ${c} years old."`)
+        }
+
+        {
+            let a="Rahul Sajeevan";
+            b=a.toUpperCase();
+            c="Ernakulam";
+            d=c.toUpperCase();
+            document.getElementById("Q5").innerHTML=(`My name is ${b}.(declaring fname & lastname in uppercase). I live in ${d} (uppercase)."`)
+
+        }
+
+        {
+            a="filename.js";
+            b=a.slice(0,-3);
+            document.getElementById("Q6").innerHTML=(`My Filename: ${a} <br>Output without extension: ${b}`);
+        }
+
+        {
+            function sum() {
+            let a = 10;
+            let b = 10;
+            let c = a * b;
+            document.getElementById("Q7").innerHTML = `A = ${a}<br>B = ${b}<br>The Result: ${c}`;
+        }
+        sum();
+        }
+
+        {
+            function sum() {
+            let a = 10;
+            let b = 10;
+            let c =10;
+            let Mul = a * b *c;
+            document.getElementById("Q8").innerHTML = `A = ${a}<br>B = ${b}<br>C =${c}<br>The Result: ${Mul}`;
+        }
+        sum();
+        }
+
+
+        {
+            function sum(x,y){
+                z=x+y;
+                return z;
+            }
+            let a=10;
+            let b=20;
+            let c=2;
+            sum(a,b);
+            d=c*z;
+            document.getElementById("Q9").innerHTML=`The resul of 2*(10+20) : ${d}`;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array in JS</h1>
+    <br>
+    <hr>
+    <h3>Array printing` </h3>
+    <p id="fruit"></p>
+    <p id="f"></p>
+    <P id="is"></P>
+    <p id="len"></p>
+    <p id="sec"></p>
+    <p id="three"></p>
+    <p id="four"></p>
+    <p id="pop"></p>
+    <p id="del"></p>
+    <p id="und"></p>
+    <p id="slice1"></p>
+    <p id="slice2"></p>
+    <p id="index"></p>
+    <p id="sarr"></p>
+    <p id="sort"></p>
+    <p id="rev"></p>
+
+    <p id="tos"></p>
+    <p id="to"></p>
+    <p id="tos1"></p>
+
+    <script>
+        const fruits=["Apple","Mango","Banana"];
+        document.getElementById("fruit").innerHTML="My Fruits = "+fruits;
+        a=typeof(fruits);
+        document.getElementById("f").innerHTML="its datatype is :"+a;
+        b=Array.isArray(fruits);
+        document.getElementById("is").innerHTML="Is this an array :"+b;
+        c=fruits.length;
+        document.getElementById("len").innerHTML="Array Length ="+c;
+        d=fruits[1];
+        document.getElementById("sec").innerHTML="My sceond item :"+d; 
+        fruits[3]="Jack frut";
+        document.getElementById("three").innerHTML="New array ="+fruits;
+        fruits.push("water melon");
+        document.getElementById("four").innerHTML="New array ="+fruits;
+        fruits.pop();
+        document.getElementById("pop").innerHTML="After Pop :"+fruits;
+        delete(fruits[0]);
+        document.getElementById("del").innerHTML="After Delete index[2] :"+fruits;
+        document.getElementById("und").innerHTML=fruits[0];
+
+        const slice1=fruits.slice(1);
+        document.getElementById("slice1").innerHTML=`${fruits} <br> After slicing :`+slice1;
+        const slice2=fruits.slice(1,3);
+        document.getElementById("slice2").innerHTML=`<br> ${fruits} <br> After slicing :`+slice2;
+
+        ind=fruits.indexOf("Mango");
+        document.getElementById("index").innerHTML='index of Mango :'+ind+'&nbsp; positon:'+(ind+1);
+
+        fruits.push("Apple");
+        fruits.push("Avacado");
+        document.getElementById("sarr").innerHTML="Before sorting Array :"+fruits;
+        s=fruits.sort();
+        document.getElementById("sort").innerHTML=`sorted array :`+s;
+        r=fruits.reverse();
+        document.getElementById("rev").innerHTML="Reversed array :"+r;
+        tos=fruits.toString();
+        document.getElementById("tos").innerHTML="To String :"+tos;
+        document.getElementById("tos1").innerHTML="First array oblect :"+fruits[2];
+
+        {
+            const myArray =new Array();
+            myArray=["a","b","c"];
+
+            
+
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

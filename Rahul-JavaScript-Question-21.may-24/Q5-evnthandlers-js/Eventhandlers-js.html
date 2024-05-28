@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+          width: 100px;
+          height: 100px;
+          border: 1px solid black;
+          margin: 50px;
+          padding: 5px;
+          text-align: center;
+          background-color: lightgray;
+        }
+        </style>
+</head>
+<body onload="pageLoaded()">
+    <h2>Familiarise onload,ondrag,onmouseover,onmousemove...</h2>
+
+    <h3>onload</h3>
+    <p>To load the page before opening </p>
+
+    <h3>ondrag</h3>
+    <div style="width:100px; height: 100px; cursor: move; margin: 50px; background-color: blue;" draggable="true" ondrag="dragging(event)">
+        Drag me!
+    </div>
+    <p id="drag"></p>
+
+    <h3>onmouseover</h3>
+    <div style="width: 100px; height: 100px; background-color: blue; margin: 50px; cursor: pointer;" onmouseover="hoverOver()">
+        Hover over me!
+    </div>
+    <p id="over"></p>
+
+    <h3>onmousemove</h3>
+    <div onmousemove="myMoveFunction()">
+        <p>onmousemove</p>
+        <p id="demo1">Mouse over me!</p>
+      </div>
+
+
+
+    <script>
+        {
+            function pageLoaded() {
+            alert("Page is loaded!");
+            }
+        }
+
+        {
+            function dragging(event) {
+                document.getElementById("drag").innerHTML=("Element is being dragged");
+            }
+        }
+
+        {
+            function hoverOver() {
+            document.getElementById("over").innerHTML=("Mouse is over the element!");
+            document.getElementById("over").style.backgroundColor = 'lightblue';
+            }
+        }
+
+        {
+            let z=+1;
+            function myMoveFunction() {
+            document.getElementById("demo1").innerHTML = z+=1;
+            }
+        }
+
+    </script>
+</body>
+</html>

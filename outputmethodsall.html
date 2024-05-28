@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; gap: 5%; margin-left: 10%; text-align: center;">
+    <div style="border: solid; border-color: blue; border-radius: 3%; background-color: yellow; width: 300px; height: 200px;">
+        <h2>JavaScript Output Methods</h2>
+        <h3>By Document Write</h3>
+        <button type="button" onclick="document.write('my value =  '+(3+7))">Click here</button>
+    </div>
+    
+    <div style="border: solid; border-color: blue; border-radius: 3%; background-color: greenyellow; width: 300px; height: 200px;">
+        <h2>JavaScript Output Methods</h2>
+        <h3>By Document GetElementBy Id</h3>
+        <p id="demo"></p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML=('my value = '+(3+7))">Click here</button>
+    </div>    
+
+    <div style="border: solid; border-color: blue; border-radius: 3%; background-color: lightyellow; width: 300px; height: 200px;">
+        <h2>JavaScript Output Methods</h2>
+        <h3>By Alert Method</h3>
+        <p id="demo"></p>
+        <button type="button" onclick="alert('my value = '+(3+7))">Click here</button>    
+    </div>
+
+</body>
+</html>

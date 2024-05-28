@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Largest Among 3 Numbers</h2>
+    <h3 id="large"></h3>
+    <script>
+        let a=10;
+        let b=15;
+        let c=20;
+        let largest= a>b? (a>c ? a:c) :(b>c ? b:c);
+        document.getElementById("large").innerHTML=`The numbers are <br>a:10<br>b:15<br>c:20 <br> The largest number is:${largest}`
+    </script>
+</body>
+</html>

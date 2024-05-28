@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <h3>Sum without function</h3>
+    <p id="sq"></p>
+
+    <h3>Sum with using function</h3>
+    <p id="sum"></p>
+
+    <h3>Sum using Function with 2 variables</h3>
+    <p id="sum1"></p>
+
+    <h3>Sum using Function with 3 variables</h3>
+    <p id="sum2"></p>
+
+    <h3>Function return</h3>
+    <p id="ret"></p>
+    <p id="ret1"></p>
+
+    <h3>Function return another function</h3>
+    <p id="fifa"></p>
+    <p id="mifa"></p>
+    <p id="rifa"></p>
+    
+    <script>
+        
+        let a = 10;
+        let b = 10;
+        let c = a + b;
+        document.getElementById("sq").innerHTML = `A = ${a}<br>B = ${b}<br>The Sum: ${c}`;
+
+        function sum() {
+            let a = 10;
+            let b = 10;
+            let c = a + b;
+            document.getElementById("sum").innerHTML = `A = ${a}<br>B = ${b}<br>The Sum: ${c}`;
+        }
+        sum();
+
+        
+        {
+            let f = 100;
+            let g = 100;
+            function sum(x, y) {
+            let z = x + y;
+                document.getElementById("sum1").innerHTML = `First = ${x}<br>Second = ${y}<br>The Sum: ${z}`;
+            }                
+            sum(f, g);
+        }
+
+        
+        {
+            let m = 1000;
+            let n = 1000;
+            let o = 1000;
+            function sum(x, y, z) {
+                let sum = x + y + z;
+                document.getElementById("sum2").innerHTML = `First = ${x}<br>Second = ${y}<br>Third = ${z}<br>The Sum: ${sum}`;
+            }
+            sum(m, n, o);
+        }
+
+        {
+            // let k = 20;
+
+            function sum(z, k) {
+                let l = z + k;  
+                return l;
+            }
+
+            let x = 10;
+            let y = 20;
+            let z = sum(x, y);
+            document.getElementById("ret").innerHTML = `The sum  = ${z}`;
+
+            let h = 3;  
+            let g = z * h;  
+
+            document.getElementById("ret1").innerHTML = `Z = ${z} <br> H = ${h} <br> z * h = ${g}`;
+        }
+
+        {
+            function sum(a, b) {
+            let c = a + b;
+            document.getElementById("fifa").innerHTML = `Sum = ${c}`;
+            return c;
+        }
+
+            function mul(d) {
+            let result = d * 2;
+            document.getElementById("mifa").innerHTML = `mul = ${result}`;
+            return result;
+        }
+
+        let x = 20;
+        let y = 40;
+        let result = mul(sum(x, y));
+        document.getElementById("rifa").innerHTML = `Result = ${result}`;
+            
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

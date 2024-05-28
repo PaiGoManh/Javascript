@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Questions</h1>
+    <br>
+    <h3>1. Program to find 3.5+2.4</h3>
+    <h4 id="q1" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>2.Program to find 104.5/5</h3>
+    <h4 id="q2" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>3 Program to find 4.5*2</h3>
+    <h4 id="q3" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>4 Program to find type of different variables</h3>
+    <h3>x=5; , x=3.5; , x=”a”; , x=”hello”; , x=null; , x</h3>
+
+        <h4 id="q41" style="margin-left: 3%;"></h4>
+        <h4 id="q42" style="margin-left: 3%;"></h4>
+        <h4 id="q43" style="margin-left: 3%;"></h4>
+        <h4 id="q44" style="margin-left: 3%;"></h4>
+        <h4 id="q45" style="margin-left: 3%;"></h4>
+        <h4 id="q46" style="margin-left: 3%;"></h4>
+    <hr>   
+    <h3>5 Print your full name storing fname & lname</h3>
+    <h4 id="q5" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>6. “MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.”</h3>
+    <h3>Replace MongoDB with Blockchain.</h3>
+    <h4 id="q6" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>7.Enter a list of films you like</h3>
+    <h4 id="q7" style="margin-left: 3%;"></h4>
+    <h3>From the list print your most favourite film</h3>
+    <h4 id="q71" style="margin-left: 3%;"></h4>
+    <h3>Add one more film to the list</h3> 
+    <h4 id="q72" style="margin-left: 3%;"></h4>
+    <h3>Pop one element from list</h3> 
+    <h4 id="q73" style="margin-left: 3%;"></h4>
+    <h3>Delete the least interseted film from list</h3>
+    <h4 id="q74" style="margin-left: 3%;"></h4>
+    <h3>Make a different array from 3rd position to 6th position </h3>
+    <h4 id="q75" style="margin-left: 3%;"></h4>
+    <h3><br>Find the position of film acted by your favourite actor</h3>
+    <h4 id="q76" style="margin-left: 3%;"></h4>
+    <hr>
+    <h3>Included or not</h3>
+    <h4 id="in"></h4>
+    <script>
+        {
+            let a=3.5;
+            let b=2.4;
+            let sum=a+b;
+            document.getElementById("q1").innerHTML=`a= ${a} <br> b=${b} <br> sum=`+sum+`<br> Type of ${sum}=`+typeof(sum);
+        }
+        {
+            let a=104.5;
+            let b=5;
+            let sum=a+b;
+            document.getElementById("q2").innerHTML=`a= ${a} <br> b=${b} <br> sum=`+sum+`<br> Type of ${sum}=`+typeof(sum);
+        }
+        {
+            let a=4.5;
+            let b=2;
+            let sum=a*b;
+            document.getElementById("q3").innerHTML=`a= ${a} <br> b=${b} <br> sum=`+sum+`<br> Type of ${sum}=`+typeof(sum);
+        }
+        {
+            let x=5;
+            document.getElementById("q41").innerHTML=`Type of ${x}=`+typeof(x);
+        }
+        {
+            let x=3.5;
+            document.getElementById("q42").innerHTML=`Type of ${x}=`+typeof(x);
+        }
+        {
+            let x="a";
+            document.getElementById("q43").innerHTML=`Type of ${x}=`+typeof(x);
+        }
+        {
+            let x="hello";
+            document.getElementById("q44").innerHTML=`Type of ${x}=`+typeof(x);
+        }
+        {
+            let x=null;
+            document.getElementById("q45").innerHTML=`Type of ${x}=`+typeof(x);
+        } 
+        {
+            let x
+            document.getElementById("q46").innerHTML=`Type of ${x}=`+typeof(x);
+        }
+
+        {
+            let fname="Rahul"
+            let lname="Sajeevan"
+            name=fname+" "+lname;
+            document.getElementById("q5").innerHTML=`First Name=${fname}<br> Last Name= ${lname} <br> Full name=`+name;
+        }
+
+        {
+            let a="MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.";
+            b=a.replace(/MongoDB/g,"Block-chain");
+            document.getElementById("q6").innerHTML=`${a} <br> <br> Replaced output,<br><br>`+b;
+        }
+
+        {
+            let movies=["Avesham","Romanjam","The King","Valayar Paramashivam","The Commisioner","Big B","Aadu","Spadikam","C I D Moosa"];
+            document.getElementById("q7").innerHTML="Movies ="+movies;
+            a=movies[0];
+            document.getElementById("q71").innerHTML="Most Favourite Film :"+a;
+            movies.push("Premalu");
+            document.getElementById("q72").innerHTML="Movies ="+movies;
+            movies.pop();
+            document.getElementById("q73").innerHTML="Movies after pop : "+movies;
+            delete(movies[8]);
+            document.getElementById("q74").innerHTML="Movies after delete:"+movies;
+            newarray=movies.slice(2,6);
+            document.getElementById("q75").innerHTML="New Array :"+newarray;
+            a=movies.indexOf("Avesham");
+            document.getElementById("q76").innerHTML=`My favourite Actor is Fahadh <br> film is ${movies[0]} <br> position is :`+(a+1);
+            i=movies.includes("Avesham");
+            document.getElementById("in").innerHTML=(`is Avesham in the list :${i}`);
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

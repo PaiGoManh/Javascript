@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter First Number: 
+        <input type="number" id="fnum" style="margin-left: 2%;">
+        <br>
+        <br>
+        Enter Second Number:
+        <input type="number" id="lnum" style="margin-left:1%;" >
+        <br>
+        <br>
+        <div style="display: flex; gap: 2%;">
+            <button onclick="printsum()">Sum</button>
+            <button onclick="printmul()">Multiply</button>
+            <button onclick="printdiv()">Divide</button>
+        </div>
+        <p id="demo"></p>    
+    </div>
+    <script>
+        {
+            function printsum(){
+            let x=parseInt(document.getElementById("fnum").value);
+            let y=parseInt(document.getElementById("lnum").value);
+            document.getElementById("demo").innerHTML=`<br><br>Addition:`+(x+y);
+        }
+        }
+        {
+            function printmul(){
+            let x=parseInt(document.getElementById("fnum").value);
+            let y=parseInt(document.getElementById("lnum").value);
+            document.getElementById("demo").innerHTML=`<br><br>Multiplication:`+(x*y);
+        }
+        }
+        {
+            function printdiv(){
+            let x=parseInt(document.getElementById("fnum").value);
+            let y=parseInt(document.getElementById("lnum").value);
+            document.getElementById("demo").innerHTML=`<br><br>Division :`+(x/y);
+        }
+        }
+    </script>
+</body>
+</html>

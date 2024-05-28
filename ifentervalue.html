@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fn">First Number :</label>
+    <input type="text" id="fn">
+    <label for="sn">Second Number :</label>
+    <input type="text" id="sn">
+    <button onclick="Equal()">Equal or Not</button>
+
+    <h3 id="demo"></h3>
+
+    <script>
+        function Equal(){
+            let a = parseInt(document.getElementById("fn").value);
+            let b = parseInt(document.getElementById("sn").value);
+
+            if (a === b) {
+                document.getElementById("demo").innerHTML = `A is ${a} <br> B is ${b} <br> A and B are equal`;
+            } else if (a > b) {
+                document.getElementById("demo").innerHTML = `A is ${a} <br> B is ${b} <br> A is greater`;
+            } else {
+                document.getElementById("demo").innerHTML = `A is ${a} <br> B is ${b} <br> B is greater`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Swapping two numbers</h1>
+        Enter First Number: 
+        <input type="number" id="f1" style="margin-left: 2%;">
+        <br>
+        <br>
+        Enter Second Number:
+        <input type="number" id="f2" style="margin-left:1%;" >
+        <br>
+        <br>
+        <div style="display: flex; gap: 2%;">
+            <button onclick="swap()">Swap</button>
+        </div>
+        <p id="demo"></p>    
+    </div>
+    <script>
+        {
+            function swap(){
+                let a=parseInt(document.getElementById("f1").value);
+                let b=parseInt(document.getElementById("f2").value);
+                    a = a + b;
+                    b = a - b;
+                    a = a - b;
+                document.getElementById("demo").innerHTML=`after Swapping a: ${a} <br> after swaping b :${b} `;
+            }
+        }
+    </script>
+</body>
+</html>

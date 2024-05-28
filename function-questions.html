@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Area of circle</h3>
+    <h4 id="areac"></h4>
+
+    <h3>Area of Rectangle</h3>
+    <h4 id="arear"></h4>
+
+    <h3>Area of circle</h3>
+    <h4 id="areas"></h4>
+
+    <h3>Perimeter of Circle</h3>
+    <h4 id="perc"></h4>
+
+    <h3>Perimeter of Rectangle</h3>
+    <h4 id="perr"></h4>
+
+    <h3>Perimeter of Square</h3>
+    <h4 id="pers"></h4>
+
+    <script>
+        {
+    function area(r){
+        result=3.14*r*r;
+        document.getElementById("areac").innerHTML=`Area:`+result;
+    }
+    let r=2;
+    area(r);
+}
+
+{
+    function area(l,b){
+        result=l*b;
+        document.getElementById("arear").innerHTML=`Area:`+result;
+    }
+    let x=10;
+    let y=10;
+    area(x,y);
+}
+
+{
+    function area(a){
+        result=a*a;
+        document.getElementById("areas").innerHTML=`Area:`+result;
+    }
+    let a=2;
+    area(a);
+}
+
+{
+    function Per(r){
+        result=2*3.14*r;
+        document.getElementById("perc").innerHTML=`Perimeter :`+result;
+    }
+    let r=4;
+    Per(r);
+}
+
+{
+    function Per(l,b){
+        result=(l+b)*2;
+        document.getElementById("perr").innerHTML=`Perimeter:`+result;
+    }
+    let l=20;
+    let b=10;
+    Per(l,b);
+}
+
+{
+    function Per(a){
+        result=4*a;
+        document.getElementById("pers").innerHTML=`Perimeter :`+result;
+    }
+    let a=10;
+    Per(a);
+}
+    </script>
+</body>
+</html>

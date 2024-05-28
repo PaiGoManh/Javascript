@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Program to find square of a number</h3>
+    <h4>Enter a number to find Square : <input type="text" id="sq"> </h4>
+    <div style="display: flex; gap: 2%;">
+        <button onclick="findSquare()">Find Square</button>
+    </div>
+    <p id="square"></p>
+    <br>
+    <hr>
+    <br>
+    <h3>Program to find cube of a number</h3>
+    <h4>Enter a number to find Square : <input type="text" id="cu"> </h4>
+    <div style="display: flex; gap: 2%;">
+        <button onclick="findCube()">Find Cube</button>
+    </div>
+    <p id="cube"></p>
+    <br>
+    <hr>
+    <br>
+    <h3>Program to find Simple Interest</h3>
+    <h4>Principal: <input type="text" id="principal"></h4>
+    <h4>Rate of Interest: <input type="text" id="rate"></h4>
+    <h4>Time (years): <input type="text" id="time"></h4>
+    <div style="display: flex; gap: 2%;">
+        <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+    </div>
+    <p id="simpleInterest"></p> 
+    <br>
+    <hr>
+    <br>
+    <h3>Program to find Compound Interest</h3>
+    <h4>Principal: <input type="text" id="principalC" style="margin-left: 5%;"></h4>
+    <h4>Rate of Interest: <input type="text" id="rateC"></h4>
+    <h4>Time (years): <input type="text" id="timeC"></h4>
+    <h4>Compounds per Year: <input type="text" id="nC"></h4>
+    <div style="display: flex; gap: 2%;">
+        <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+    </div>
+    <p id="compoundInterest"></p> 
+    <br>
+    <br>
+
+    <script>
+        {
+            function findSquare() {
+                let number=parseInt(document.getElementById("sq").value);
+                result=number*number;
+                document.getElementById("square").innerHTML=("Square of " + number + " is: " + result);
+            }
+        }
+
+        {
+            function findCube() {
+                let number=parseInt(document.getElementById("cu").value);
+                result=number*number*number;
+                document.getElementById("cube").innerHTML=("Square of " + number + " is: " + result);
+            }
+        }
+
+        {
+            function calculateSimpleInterest() {
+            let principal = parseFloat(document.getElementById("principal").value);
+            let rate = parseFloat(document.getElementById("rate").value);
+            let time = parseFloat(document.getElementById("time").value);
+            let simpleInterest = (principal * rate * time) / 100;
+            document.getElementById("simpleInterest").innerHTML = "Simple Interest is: " + simpleInterest;
+            }
+        }
+
+        {
+            function calculateCompoundInterest() {
+            let principal = parseFloat(document.getElementById("principalC").value);
+            let rate = parseFloat(document.getElementById("rateC").value);
+            let time = parseFloat(document.getElementById("timeC").value);
+            let n = parseInt(document.getElementById("nC").value);
+            let a=(1 + (rate / (n * 100)));
+            let compoundInterest = principal * (2*(a), n * time) - principal;
+            document.getElementById("compoundInterest").innerHTML = "Compound Interest is: " + compoundInterest;
+        }
+        }
+    </script>
+</body>
+</html>

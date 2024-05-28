@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Star in console</h1>
+    
+    <script>
+function printRightTriangle(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let pattern = '';
+        for (let j = 1; j <= i; j++) {
+            pattern += '* ';
+        }
+        console.log(pattern);
+    }
+
+}   
+document.write(printRightTriangle(4)) 
+</script>
+</body>
+</html>
