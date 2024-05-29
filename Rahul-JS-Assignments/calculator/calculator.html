@@ -7,40 +7,55 @@
 </head>
 <body>
     <div>
-        <table  bgcolor="black"  style="border-radius:8px;" cellpadding="2" cellspacing="6" >
+        <table bgcolor="black" style="border-radius:8px;" cellpadding="2" cellspacing="6">
             <tr>
-                <td colspan="4" width="100" height="20" bgcolor="LightGreen" style="border-radius:5px;">0</td>
+                <td colspan="4" width="100" height="20" bgcolor="LightGreen" style="border-radius:5px;" id="res">0</td>
             </tr>
             <tr>
-                <td><b><input type="button" style=" border: none; background-color: gray; color: white; " value="7"></b></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="8"></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="9"></td>
-                <td><input type="button" style=" border: none; background-color: dodgerblue; color: white;" value="/" style="background-color:DodgerBlue;"></td>
+                <td><b><input type="button" style="border: none; background-color: gray; color: white;" value="7" onclick="solve('7')"></b></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="8" onclick="solve('8')"></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="9" onclick="solve('9')"></td>
+                <td><input type="button" style="border: none; background-color: dodgerblue; color: white;" value="/" onclick="solve('/')"></td>
             </tr>
-              <tr style="background-color: black;">
-                <td><b><input type="button" style=" border: none; background-color: gray; color: white;" value="4"></b></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="5"></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="6"></td>
-                <td><input type="button" style=" border: none; background-color: dodgerblue; color: white;" value="*" style="background-color:DodgerBlue;"></td>
-              </tr>
-              <tr style="background-color: black;">
-                <td><b><input type="button" style=" border: none; background-color: gray; color: white;" value="1"></b></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="2"></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="3"></td>
-                <td><input type="button" style=" border: none; background-color: dodgerblue; color: white;" value="-" style="background-color:DodgerBlue;"></td>
-              </tr>
-              <tr style="background-color: black;">
-                <td><b><input type="button" style=" border: none; background-color: gray; color: white;" value="0"></b></td>
-                <td><input type="button" style=" border: none; background-color: gray; color: white;" value="."></td>
-                <td><input type="button" style=" border: none; background-color:tomato; color: white;" value="="></td>
-                <td><input type="button" style=" border: none; background-color: dodgerblue; color: white;" value="+" style="background-color:DodgerBlue;"></td>
-              </tr>
+            <tr style="background-color: black;">
+                <td><b><input type="button" style="border: none; background-color: gray; color: white;" value="4" onclick="solve('4')"></b></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="5" onclick="solve('5')"></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="6" onclick="solve('6')"></td>
+                <td><input type="button" style="border: none; background-color: dodgerblue; color: white;" value="*" onclick="solve('*')"></td>
+            </tr>
+            <tr style="background-color: black;">
+                <td><b><input type="button" style="border: none; background-color: gray; color: white;" value="1" onclick="solve('1')"></b></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="2" onclick="solve('2')"></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="3" onclick="solve('3')"></td>
+                <td><input type="button" style="border: none; background-color: dodgerblue; color: white;" value="-" onclick="solve('-')"></td>
+            </tr>
+            <tr style="background-color: black;">
+                <td><b><input type="button" style="border: none; background-color: gray; color: white;" value="0" onclick="solve('0')"></b></td>
+                <td><input type="button" style="border: none; background-color: gray; color: white;" value="." onclick="solve('.')"></td>
+                <td><input type="button" style="border: none; background-color:tomato; color: white;" value="=" onclick="result()"></td>
+                <td><input type="button" style="border: none; background-color: dodgerblue; color: white;" value="+" onclick="solve('+')"></td>
+            </tr>
         </table>
-        
     </div>
 
+    <script>
+        function solve(val) {
+            var resElement = document.getElementById('res');
+            if (resElement.innerText === "0") {
+                resElement.innerText = val;
+            } else {
+                resElement.innerText += val;
+            }
+        }
 
-
-
-  </body>
+        function result() {
+            var resElement = document.getElementById('res');
+            try {
+                resElement.innerText = eval(resElement.innerText);
+            } catch (e) {
+                resElement.innerText = "Error";
+            }
+        }
+    </script>
+</body>
 </html>
