@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="swap.js"></script>
 </head>
 <body>
     <div>
@@ -22,17 +23,5 @@
         </div>
         <p id="demo"></p>    
     </div>
-    <script>
-        {
-            function swap(){
-                let a=parseInt(document.getElementById("f1").value);
-                let b=parseInt(document.getElementById("f2").value);
-                    a = a + b;
-                    b = a - b;
-                    a = a - b;
-                document.getElementById("demo").innerHTML=`after Swapping a: ${a} <br> after swaping b :${b} `;
-            }
-        }
-    </script>
 </body>
 </html>

@@ -8,11 +8,13 @@
 <body>
     <h3>Enter a student name:</h3>
     <input type="text" id="sname" placeholder="Enter student ID">
-    <button onclick="findStudent()">Find Student</button>
+    <button onclick="findStudent()">found</button>
+    <button onclick="enterData()">Enter Student</button>
     <p id="dname"></p>
+    <p id="cname"></p>
 
     <script>
-        const students = ['Alice', 'Bob', 'Charlie', 'Diana', 'Edward'];
+        const students = ['Rahul', 'Manu', 'Sujin', 'Maneesh', 'Midhun','Anandu'];
 
         function findStudent() {
             let name = document.getElementById("sname").value;

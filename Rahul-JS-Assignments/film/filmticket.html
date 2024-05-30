@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Booking</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="filmticket.js"></script>
 </head>
 <body class="flex flex-col items-center mt-12 font-sans w-[30%] ml-[30%]">
     <div class="container bg-gray-100 p-5 rounded-lg shadow-lg">
@@ -25,14 +26,5 @@
     </div>
     <div id="ticket" class="w-full h-10 border border-1 border-red pt-2 bg-[lightgray] text-[blue] flex flex-col items-center mt-5 "></div>
     <div id="print" class="w-[200px] h-10 border border-1 border-red pt-2 bg-[blue] text-[white] flex flex-col items-center mt-5 ">Print Ticket</div>
-    <script>
-        function submit() {
-            const name = document.getElementById('name').value;
-            const film = document.getElementById('film').value;
-            const tickets = document.getElementById('tickets').value;
-            document.getElementById("ticket").innerHTML=`${name} booked ${tickets} ticket(s) for ${film}`;
-
-        }                
-    </script>
 </body>
 </html>
