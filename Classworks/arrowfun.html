@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter First Number: 
+        <input type="number" id="fnum" style="margin-left: 2%;">
+        <br>
+        <br>
+        Enter Second Number:
+        <input type="number" id="lnum" style="margin-left:1%;" >
+        <br>
+        <br>
+        <button onclick="sum()">Sum</button>
+        <p id="demo"></p>    
+    <script>
+        let sum=()=>{
+            let x=parseInt(document.getElementById("fnum").value);
+            let y=parseInt(document.getElementById("lnum").value);
+
+            sum = x+y;
+            document.getElementById("demo").innerHTML=`<br><br>Addition:`+sum;
+        }
+    </script>
+</body>
+</html>
